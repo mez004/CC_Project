@@ -27,6 +27,7 @@ Endpoint
 `POST /pdf-a3/generate`
 
 Request Body
+```json
 {
   "pdf": {
     "content": "base64-encoded-pdf"
@@ -42,10 +43,10 @@ Success Response (200)
     "content": "base64-encoded-pdfa3"
   }
 }
-
+```
 ## Error Responses
-400 — Missing fields or invalid Base64
-500 — Internal error during PDF/A-3 generation
+- 400 — Missing fields or invalid Base64
+- 500 — Internal error during PDF/A-3 generation
 
 ## How It Works
 1. Decode Base64 PDF and XML
